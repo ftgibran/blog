@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers\Api;
 
+use App\Repositories\GuestRepository;
 use Auth;
 use Illuminate\Http\Request;
 use App\Http\Requests\CommentRequest;
@@ -12,11 +13,13 @@ use App\Notifications\ReceivedComment as Received;
 class CommentController extends ApiController
 {
     protected $comment;
+    protected $guest;
 
-    public function __construct(CommentRepository $comment)
+    public function __construct(CommentRepository $comment, GuestRepository $guest)
     {
         parent::__construct();
         
+        $this->guest = $guest;
         $this->comment = $comment;
     }
 
@@ -45,6 +48,33 @@ class CommentController extends ApiController
         $comment = $this->comment->store($data);
 
         $comment->commentable->user->notify(new Received($comment));
+
+        return $this->respondWithItem($comment, new CommentTransformer);
+    }
+
+    /**
+     * Store a newly created resource in storage.
+     *
+     * @param  \App\Http\Requests\CommentRequest  $request
+     * @return \Illuminate\Http\Response
+     */
+    public function storeGuest(CommentRequest $request)
+    {
+        $data1 = [
+            'name' => $request->get('name'),
+            'email' => $request->get('email'),
+            'ip' => $request->ip()
+        ];
+
+        $data2 = [
+            'user_id' => \App\User::where('email', 'guest@clashofnerds.com')->value('id'),
+            'commentable_id' => $request->get('commentable_id'),
+            'commentable_type' => $request->get('commentable_type'),
+            'content' => $request->get('content')
+        ];
+
+        $guest = $this->guest->store($data1);
+        $comment = $this->comment->store($data2);
 
         return $this->respondWithItem($comment, new CommentTransformer);
     }

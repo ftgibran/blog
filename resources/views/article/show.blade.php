@@ -45,11 +45,12 @@
     </div>
 
     @if(Auth::guest())
-        <comment title="评论"
+        <comment title="Comments"
                  commentable-type="articles"
-                 commentable-id="{{ $article->id }}"></comment>
+                 commentable-id="{{ $article->id }}"
+                 guest-comment></comment>
     @else
-        <comment title="评论"
+        <comment title="Comments"
                  username="{{ Auth::user()->name }}"
                  user-avatar="{{ Auth::user()->avatar }}"
                  commentable-type="articles"
