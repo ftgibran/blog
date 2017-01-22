@@ -16,7 +16,8 @@
         "laravel/socialite": "^2.0",
         "yzalis/identicon": "^1.1",
         "jellybool/translug" : "~1.0",
-        "intervention/image": "^2.3"
+        "intervention/image": "^2.3",
+        "laravelcollective/html": "^5.3.0"
     },
     "require-dev": {
         "fzaninotto/faker": "~1.4",
