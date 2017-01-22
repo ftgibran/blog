@@ -31,6 +31,15 @@ class HomeController extends ApiController
         $this->guest = $guest;
     }
 
+    public function checkIP(Request $request)
+    {
+        $data = [
+            'registered' => \App\Guest::where('ip', $request->ip())->first() ? true : false
+        ];
+
+        return $this->respondWithArray($data);
+    }
+
     public function storeGuest(Request $request)
     {
         $data = [

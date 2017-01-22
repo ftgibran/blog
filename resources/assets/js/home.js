@@ -14,6 +14,11 @@ Vue.http.interceptors.push((request, next) => {
     next();
 });
 
+Vue.component(
+    'assassins-creed-promo',
+    require('./components/ads/AssassinsCreedPromo.vue')
+);
+
 Vue.component('comment', require('./components/Comment.vue'));
 
 Vue.component('jumbotron', require('./components/Jumbotron.vue'));

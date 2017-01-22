@@ -2,8 +2,11 @@
 
 namespace App;
 
+use App\Repositories\GuestRepository;
+use App\Services\IP;
 use App\Traits\FollowTrait;
 use App\Scopes\StatusScope;
+use Illuminate\Http\Request;
 use Laravel\Passport\HasApiTokens;
 use Illuminate\Notifications\Notifiable;
 use Illuminate\Database\Eloquent\SoftDeletes;
