@@ -20,8 +20,18 @@ Route::get('/concurso/assassins-creed', function () {
     return view('landing.assassins-creed');
 });
 
+Route::get('/concurso/assassins-creed-success', function () {
+    return view('landing.assassins-creed-success');
+});
+
+Route::post('concurso/cadastrar', 'LandingPageController@create');
+
 Route::get('/concurso/darth-vader', function () {
     return view('landing.darth-vader');
+});
+
+Route::get('/concurso/darth-vader-success', function () {
+    return view('landing.darth-vader-success');
 });
 
 // Discussion

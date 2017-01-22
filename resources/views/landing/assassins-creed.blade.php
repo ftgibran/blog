@@ -81,17 +81,6 @@
     </div>
 </nav>
 
-
-<div id="fb-root"></div>
-<script>(function(d, s, id) {
-        var js, fjs = d.getElementsByTagName(s)[0];
-        if (d.getElementById(id)) return;
-        js = d.createElement(s); js.id = id;
-        js.src = "//connect.facebook.net/pt_BR/sdk.js#xfbml=1&version=v2.8&appId=706339409541950";
-        fjs.parentNode.insertBefore(js, fjs);
-    }(document, 'script', 'facebook-jssdk'));</script>
-
-
 <div class="row">
     <div class="col s12">
         <div class="card-panel">
@@ -104,27 +93,28 @@
 
                 <div class="col m6 s12">
 
-                    {{ Form::open(['url' => 'concurso/assassins-creed/cadastrar']) }}
+                    {{ Form::open(['url' => 'concurso/cadastrar']) }}
+                    <input type="hidden" name="tipo" value="1">
                     <div class="row">
                         <h4 style="color: #d5b275">Envie a sua frase e concorra a um Funko Pop do Assassin's Creed!</h4>
                         <h6 style="color: #898989">Escreva uma frase explicando <b>porque você merece ser ganhador dessa competição</b> até às 23:59 do dia 25/01. A melhor frase será selecionada e o ganhador será contatado na próxima segunda, dia 29/01 para informar o endereço de entrega <span style="font-size: 10px">(entregamos em todo Brasil)</span></h6>
                         <div class="input-field col s12">
-                            <input id="email" type="text" class="validate" required>
+                            <input id="nome" name="nome" type="text" class="validate" required>
                             <label for="email">Nome Completo *</label>
                         </div>
                     </div>
 
                     <div class="row">
                         <div class="input-field col s12">
-                            <input id="email" type="email" class="validate" required>
+                            <input id="email" name="email" type="email" class="validate" required>
                             <label for="email">E-mail *</label>
                         </div>
                     </div>
 
                     <div class="row">
                         <div class="input-field col s12">
-                            <textarea id="textarea1" class="materialize-textarea" required></textarea>
-                            <label for="textarea1">Porque você merece ser ganhador dessa competição *</label>
+                            <textarea id="textarea1" name="frase" class="materialize-textarea" required maxlength="140"></textarea>
+                            <label for="textarea1">Porque você merece ser ganhador dessa competição * (140 caracteres)</label>
                         </div>
                     </div>
 
@@ -136,15 +126,10 @@
                     {{ Form::close() }}
                 </div>
 
-
             </div>
         </div>
     </div>
 </div>
-
-
-<div class="fb-share-button" data-href="http://clashofnerds.com" data-layout="button" data-size="large" data-mobile-iframe="true"><a class="fb-xfbml-parse-ignore" target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=http%3A%2F%2Fclashofnerds.com%2F&amp;src=sdkpreparse">Compartilhar</a></div>
-
 
 <!--Import jQuery before materialize.js-->
 <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>

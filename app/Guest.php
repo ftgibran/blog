@@ -25,6 +25,7 @@ class Guest extends Model
         'name',
         'email',
         'ip',
+        'typePop',
         'created_at',
     ];
 

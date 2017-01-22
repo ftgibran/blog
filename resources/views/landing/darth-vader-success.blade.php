@@ -13,9 +13,9 @@
 
     <meta property="og:url"           content="http://www.clashofnerds/concurso/assassins-creed" />
     <meta property="og:type"          content="website"/>
-    <meta property="og:title"         content="Clash Of Nerds - Concurso Darth Vader"/>
+    <meta property="og:title"         content="Clash Of Nerds - Concurso Darth Vade"/>
     <meta property="og:description"   content="Escreva uma frase explicando porque você merece ser ganhador dessa competição até às 23:59 do dia 25/01. A melhor frase será selecionada e o ganhador será contatado na próxima segunda, dia 29/01 para informar o endereço de entrega (entregamos em todo Brasil)" />
-    <meta property="og:image"         content="{{ asset('images/darth-vader-choke-pop.png')}}" />
+    <meta property="og:image"         content="{{ asset('images/darth-vader-choke-pop.png.png')}}" />
 
 
 
@@ -82,50 +82,29 @@
 </nav>
 
 
-
 <div class="row">
     <div class="col s12">
         <div class="card-panel">
             <div class="row">
 
                 <div class="col m6 s12">
-                    <img src="{{ asset('images/darth-vader-choke-pop.png') }}" alt="">
+                    <img src="{{ asset('images/darth-vader-choke-pop.png') }}   " alt="">
                 </div>
 
 
                 <div class="col m6 s12">
 
-                    {{ Form::open(['url' => 'concurso/cadastrar']) }}
-                    <input type="hidden" name="tipo" value="2">
                     <div class="row">
-                        <h4 style="color: #d5b275">Envie a sua frase e concorra a um Funko Pop do Darth Vader!</h4>
-                        <h6 style="color: #898989">Escreva uma frase explicando <b>porque você merece ser ganhador dessa competição</b> até às 23:59 do dia 25/01. A melhor frase será selecionada e o ganhador será contatado na próxima segunda, dia 29/01 para informar o endereço de entrega <span style="font-size: 10px">(entregamos em todo Brasil)</span></h6>
-                        <div class="input-field col s12">
-                            <input id="nome" name="nome" type="text" class="validate" required>
-                            <label for="email">Nome Completo *</label>
-                        </div>
-                    </div>
-
-                    <div class="row">
-                        <div class="input-field col s12">
-                            <input id="email" name="email" type="email" class="validate" required>
-                            <label for="email">E-mail *</label>
-                        </div>
-                    </div>
-
-                    <div class="row">
-                        <div class="input-field col s12">
-                            <textarea id="textarea1" name="frase" class="materialize-textarea" required></textarea>
-                            <label for="textarea1">Porque você merece ser ganhador dessa competição *</label>
-                        </div>
+                        <h4 class="center" style="color: #d5b275">PARABÉNS!</h4>
+                        <h6 class="center" style="color: #898989">Aguarde até a próxima segunda (29/01) e que a força esteja com você!</h6>
                     </div>
 
                     <div class="row">
                         <div class="col s12 center">
-                            <button class="waves-effect waves-light btn color-default">Participar</button>
+                            <a href="/" class="waves-effect waves-light btn color-default">Clash Of Nerds</a>
                         </div>
                     </div>
-                    {{ Form::close() }}
+
                 </div>
 
 
