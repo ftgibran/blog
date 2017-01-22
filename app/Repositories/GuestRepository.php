@@ -35,9 +35,9 @@ class GuestRepository
      */
     public function save($model, $input)
     {
-        $model->fill($input);
+        $model = $model->firstOrNew(['email' => $input['email']]);
 
-        $model->save();
+        $model->fill($input)->save();
 
         return $model;
     }

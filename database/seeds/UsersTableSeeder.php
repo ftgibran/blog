@@ -87,12 +87,33 @@ class UsersTableSeeder extends Seeder
             [
                 'name' => 'Julia Wajs',
                 'email' => 'juliaswajs@gmail.com',
-                'password' => Hash::make('abcabc'),
+                'password' => hash::make('abcabc'),
                 'status' => true,
                 'is_admin' => true,
                 'confirm_code' => str_random(64),
-                'created_at' => Carbon::now(),
-                'updated_at' => Carbon::now()
+                'created_at' => carbon::now(),
+                'updated_at' => carbon::now()
+            ],
+            [
+                'name' => 'Bruno Shigueo',
+                'email' => 'yesshigueo@gmail.com',
+                'password' => hash::make('abcabc123123'),
+                'status' => true,
+                'is_admin' => true,
+                'confirm_code' => str_random(64),
+                'created_at' => carbon::now(),
+                'updated_at' => carbon::now()
+            ],
+            [
+                'id' => 10,
+                'name' => 'Guest',
+                'email' => 'guest@clashofnerds.com',
+                'password' => hash::make('UX7UcNYcMuMZfBuO'),
+                'status' => true,
+                'is_admin' => true,
+                'confirm_code' => str_random(64),
+                'created_at' => carbon::now(),
+                'updated_at' => carbon::now()
             ]
         ];
 
