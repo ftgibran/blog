@@ -15,6 +15,15 @@ Route::group(['prefix' => 'auth/github'], function () {
 // Search
 Route::get('search', 'HomeController@search');
 
+// Landing Page
+Route::get('/concurso/assassins-creed', function () {
+    return view('landing.assassins-creed');
+});
+
+Route::get('/concurso/darth-vader', function () {
+    return view('landing.darth-vader');
+});
+
 // Discussion
 Route::resource('discussion', 'DiscussionController', ['except' => 'destroy']);
 
@@ -71,3 +80,6 @@ Route::group(['prefix' => 'dashboard', 'middleware' => ['auth', 'admin']], funct
 // Article
 Route::get('/', 'ArticleController@index');
 Route::get('{slug}', 'ArticleController@show');
+
+
+
