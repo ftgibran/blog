@@ -16,8 +16,7 @@
 
                                 <h5>Para acessar esse conteúdo, preencha os campos abaixo</h5>
 
-                                <form style="margin-top: 30px;"
-                                      @submit.prevent="storeGuest">
+                                <form @submit.prevent="storeGuest">
 
                                     <input type="hidden" name="tipo" value="1">
                                     <div class="form-group">

@@ -29,6 +29,11 @@ Vue.component(
     require('./components/ads/AssassinsCreedPromo.vue')
 );
 
+Vue.component(
+    'darth-vader-promo',
+    require('./components/ads/DarthVaderPromo.vue')
+);
+
 Vue.component('comment', require('./components/Comment.vue'));
 
 Vue.component('jumbotron', require('./components/Jumbotron.vue'));

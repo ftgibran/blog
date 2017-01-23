@@ -1,7 +1,7 @@
 <template>
     <div>
 
-        <div id="assassins-creed-promo" class="modal fade" tabindex="-1" role="dialog"
+        <div id="darth-vader-promo" class="modal fade" tabindex="-1" role="dialog"
              aria-labelledby="myLargeModalLabel">
             <div class="modal-dialog modal-lg" role="document">
                 <div class="modal-content">
@@ -17,7 +17,7 @@
                         <div class="row">
 
                             <div class="col-md-6" style="padding: 0 2em;">
-                                <img src="/images/Funko-Assassins-Creed.png" class="img-responsive" alt="">
+                                <img src="/images/darth-vader-choke-pop.png" class="img-responsive" alt="">
                             </div>
 
                             <div class="col-md-6" style="padding: 0 2em;">
@@ -27,7 +27,7 @@
                                     <input type="hidden" name="tipo" value="1">
                                     <div class="form-group">
                                         <h4 style="color: #d5b275">Envie a sua frase e concorra a um Funko Pop do
-                                            Assassin's Creed!</h4>
+                                            Darth Vader!</h4>
                                         <p style="color: #898989">Escreva uma frase explicando <b>porque você
                                             merece ser ganhador dessa competição</b> até às 23:59 do dia 25/01. A
                                             melhor frase será selecionada e o ganhador será contatado na próxima
@@ -79,12 +79,12 @@
             </div>
         </div>
 
-        <ad-corner-box ref="adBox" :visible="false" title="Concorra a um Funko Pop do Assassin's Creed!">
-            <a href="/concurso/assassins-creed">
-                <img src="/images/Funko-Assassins-Creed.png" class="img-responsive" alt="">
+        <ad-corner-box ref="adBox" :visible="false" title="Concorra a um Funko Pop do Darth Vader!">
+            <a href="/concurso/darth-vader">
+                <img src="/images/darth-vader-choke-pop.png" class="img-responsive" alt="">
             </a>
             <p>
-                Saiba mais <a style="color: #d5b275" href="/concurso/assassins-creed">clicando aqui</a>
+                Saiba mais <a style="color: #d5b275" href="/concurso/darth-vader">clicando aqui</a>
             </p>
         </ad-corner-box>
 
@@ -110,7 +110,7 @@
                 name: '',
                 email: '',
                 message: '',
-                promo_id: 1
+                promo_id: 2
             }
         },
         mounted() {
@@ -123,7 +123,7 @@
                                     .then((visited) => {
                                         //Se o usuário nunca entrou no site, mostrar o modal
                                         if (!visited.data.registered) {
-                                            $('#assassins-creed-promo').modal('show');
+                                            $('#darth-vader-promo').modal('show');
                                         } else {
                                             //Caso o contrario, mostra a box ad
                                             this.$refs.adBox.ad = true;
@@ -145,7 +145,7 @@
                 this.$http.post('/api/promos', data)
                         .then((response) => {
                             toastr.success('Parabéns! A partir de agora você está concorrendo!');
-                            $('#assassins-creed-promo').modal('hide');
+                            $('#darth-vader-promo').modal('hide');
                         })
             }
         }

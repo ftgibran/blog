@@ -41,10 +41,13 @@ Route::group([
 Route::group([
     'namespace' => 'Api',
 ], function () {
-    Route::get('commentable/{commentableId}/comment', 'CommentController@show');
+    Route::get('checkip/promo', 'HomeController@checkIPPromo');
     Route::get('checkip/guest', 'HomeController@checkIPGuest');
     Route::get('checkip/visited', 'HomeController@checkIPVisited');
-    Route::post('guests', 'HomeController@storeGuest');
+    Route::post('guests', 'GuestController@store');
+    Route::post('promos', 'PromoController@store');
+
+    Route::get('commentable/{commentableId}/comment', 'CommentController@show');
     Route::post('comments/guest', 'CommentController@storeGuest');
     Route::post('comments', 'CommentController@store')->middleware('auth:api');
     Route::delete('comments/{id}', 'CommentController@destroy')->middleware('auth:api');

@@ -12,7 +12,8 @@
 
             <!-- Branding Image -->
             <a class="navbar-brand" href="{{ url('/') }}">
-                {{ config('app.name') }}
+                <img src="/images/logo.png" class="responsive-img" alt="Clash Of Nerds"
+                     style="position:relative; top: -28px; width: 240px">
             </a>
         </div>
 

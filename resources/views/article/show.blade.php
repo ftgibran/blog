@@ -3,8 +3,12 @@
 @section('content')
 
     <register></register>
-    <assassins-creed-promo>
-    </assassins-creed-promo>
+
+    @if(rand(0,1) == 0)
+        <assassins-creed-promo></assassins-creed-promo>
+    @else
+        <darth-vader-promo></darth-vader-promo>
+    @endif
 
     <jumbotron v-cloak>
         <h4>{{ $article->title }}</h4>
@@ -22,6 +26,12 @@
             <i class="ion-clock"></i>{{ $article->published_at->diffForHumans() }}
         </div>
     </jumbotron>
+
+    <div class="text-center">
+        <a href="/concurso/darth-vader">
+            <img src="/images/ads/banner_sw.gif" alt="">
+        </a>
+    </div>
 
     <div class="article container">
         <div class="row">
