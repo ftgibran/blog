@@ -5,7 +5,7 @@
     <div class="row">
         <div class="col-md-6 col-md-offset-3" style="margin-top: 50px;">
             <div class="well bs-component">
-                <form class="form-horizontal" role="form" method="POST" action="{{ url('/register') }}">
+                <form id="register" class="form-horizontal" role="form" method="POST" action="{{ url('/register') }}">
                     {{ csrf_field() }}
 
                     <fieldset>
@@ -85,4 +85,5 @@
         </div>
     </div>
 </div>
+
 @endsection

@@ -42,6 +42,8 @@ Route::group([
     'namespace' => 'Api',
 ], function () {
     Route::get('commentable/{commentableId}/comment', 'CommentController@show');
+    Route::get('checkip', 'HomeController@checkIP');
+    Route::post('guests', 'HomeController@storeGuest');
     Route::post('comments/guest', 'CommentController@storeGuest');
     Route::post('comments', 'CommentController@store')->middleware('auth:api');
     Route::delete('comments/{id}', 'CommentController@destroy')->middleware('auth:api');

@@ -67,7 +67,7 @@ class CommentController extends ApiController
         ];
 
         $data2 = [
-            'user_id' => \App\User::where('email', 'guest@clashofnerds.com')->value('id'),
+            'user_id' => 10,
             'commentable_id' => $request->get('commentable_id'),
             'commentable_type' => $request->get('commentable_type'),
             'content' => $request->get('content')
