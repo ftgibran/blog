@@ -21,6 +21,17 @@
         ]); ?>
     </script>
 
+    <style>
+
+        .container-fluid .jumbotron {
+            height: 210px;
+            background-image: url("images/blog-clash-of-nerds.png");
+            background-size: auto 210px;
+        }
+
+
+    </style>
+
     @yield('styles')
 </head>
 <body>

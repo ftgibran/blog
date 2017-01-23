@@ -3,23 +3,34 @@
 namespace App\Http\Controllers;
 
 use App\Guest;
+use App\Repositories\GuestRepository;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Input;
 
 class LandingPageController extends Controller
 {
 
+    protected $guest;
+
+    function __construct(GuestRepository $guest)
+    {
+
+        $this->guest = $guest;
+
+    }
+
 
     public function create(Request $request) {
 
-        $lead = new Guest();
-        $lead->name = Input::get('nome');
-        $lead->email = Input::get('email');
-        $lead->ip = $request->ip();
-        $lead->typePop = Input::get('tipo');
-        $lead->frase = Input::get('frase');
 
-        if($lead->save()){
+        $data = [
+            'name' => Input::get('nome'),
+            'email' => Input::get('email'),
+            'ip' => $request->ip()
+        ];
+
+
+        if($this->guest->store($data)){
             if (Input::get('tipo') == 1) {
                 return redirect('/concurso/assassins-creed-success');
             } else {
