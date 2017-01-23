@@ -1,6 +1,10 @@
 @extends('layouts.app')
 
 @section('content')
+
+    <assassins-creed-promo>
+    </assassins-creed-promo>
+
     <jumbotron v-cloak>
         <h4>{{ $article->title }}</h4>
 

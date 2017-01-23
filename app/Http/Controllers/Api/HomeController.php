@@ -3,6 +3,7 @@
 namespace App\Http\Controllers\Api;
 
 use App\Repositories\GuestRepository;
+use App\Services\IP;
 use Illuminate\Http\Request;
 use App\Repositories\UserRepository;
 use App\Repositories\VisitorRepository;
@@ -31,10 +32,23 @@ class HomeController extends ApiController
         $this->guest = $guest;
     }
 
-    public function checkIP(Request $request)
+    public function checkIPGuest(Request $request)
     {
+        $ip = new IP($request);
+
         $data = [
-            'registered' => \App\Guest::where('ip', $request->ip())->first() ? true : false
+            'registered' => \App\Guest::where('ip', $ip->get())->first() ? true : false
+        ];
+
+        return $this->respondWithArray($data);
+    }
+
+    public function checkIPVisited(Request $request)
+    {
+        $ip = new IP($request);
+
+        $data = [
+            'registered' => \App\Visitor::where('ip', $ip->get())->first() ? true : false
         ];
 
         return $this->respondWithArray($data);

@@ -15,6 +15,11 @@ Vue.http.interceptors.push((request, next) => {
 });
 
 Vue.component(
+    'ad-corner-box',
+    require('./components/ads/AdCornerBox.vue')
+);
+
+Vue.component(
     'assassins-creed-promo',
     require('./components/ads/AssassinsCreedPromo.vue')
 );
