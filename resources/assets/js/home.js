@@ -20,6 +20,11 @@ Vue.component(
 );
 
 Vue.component(
+    'register',
+    require('./components/ads/Register.vue')
+);
+
+Vue.component(
     'assassins-creed-promo',
     require('./components/ads/AssassinsCreedPromo.vue')
 );

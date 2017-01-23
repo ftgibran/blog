@@ -56,10 +56,12 @@ class HomeController extends ApiController
 
     public function storeGuest(Request $request)
     {
+        $ip = new IP($request);
+
         $data = [
             'name' => $request->get('name'),
             'email' => $request->get('email'),
-            'ip' => $request->ip()
+            'ip' => $ip->get()
         ];
 
         $this->guest->store($data);

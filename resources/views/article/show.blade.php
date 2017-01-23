@@ -2,8 +2,7 @@
 
 @section('content')
 
-    <assassins-creed-promo>
-    </assassins-creed-promo>
+    <register></register>
 
     <jumbotron v-cloak>
         <h4>{{ $article->title }}</h4>
