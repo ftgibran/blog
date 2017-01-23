@@ -1,6 +1,7 @@
 @extends('layouts.app')
 
 @section('content')
+
     <jumbotron v-cloak>
         <h3>{{ config('blog.article.title') }}</h3>
 
