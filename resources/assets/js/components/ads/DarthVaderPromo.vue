@@ -29,7 +29,7 @@
                                         <h4 style="color: #d5b275">Envie a sua frase e concorra a um Funko Pop do
                                             Darth Vader!</h4>
                                         <p style="color: #898989">Escreva uma frase explicando <b>porque você
-                                            merece ser ganhador dessa competição</b> até às 23:59 do dia 25/01. A
+                                            merece ser ganhador dessa competição</b> até às 23:59 do dia 27/01. A
                                             melhor frase será selecionada e o ganhador será contatado na próxima
                                             segunda, dia 29/01 para informar o endereço de entrega <span
                                                     style="font-size: 10px">(entregamos em todo Brasil)</span></p>
