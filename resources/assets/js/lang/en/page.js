@@ -1,5 +1,8 @@
 export default {
     users: 'Users',
+    leads: 'Leads',
+    promoAssassinsCreed: 'Assassins Creed Promo',
+    promoDarthVader: 'Darth Vader Promo',
     visitors: 'Visitors',
     articles: 'Articles',
     comments: 'Comments',

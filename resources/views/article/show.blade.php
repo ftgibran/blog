@@ -28,9 +28,15 @@
     </jumbotron>
 
     <div class="text-center">
-        <a href="/concurso/darth-vader">
-            <img src="/images/ads/banner_sw.gif" alt="">
-        </a>
+        @if(rand(0,1) == 0)
+            <a href="/concurso/assassins-creed">
+                <img src="/images/ads/banner_ac.gif" alt="Assassin Creed">
+            </a>
+        @else
+            <a href="/concurso/darth-vader">
+                <img src="/images/ads/banner_sw.gif" alt="Darth Vader">
+            </a>
+        @endif
     </div>
 
     <div class="article container">

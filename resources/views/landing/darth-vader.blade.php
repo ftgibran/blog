@@ -72,7 +72,7 @@
 
 <nav>
     <div class="nav-wrapper">
-        <a href="#" class="brand-logo" style="margin-left: 10px">
+        <a href="/" class="brand-logo" style="margin-left: 10px">
             <img src="{{ asset('images/logo.png') }}" alt="Clash Of Nerds" style="width: 240px">
         </a>
         <ul id="nav-mobile" class="right hide-on-med-and-down">

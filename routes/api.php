@@ -6,6 +6,13 @@ Route::group([
 ], function () {
     Route::get('statistics', 'HomeController@statistics');
 
+    Route::get('guests', 'GuestController@index');
+    Route::get('guests/count', 'GuestController@count');
+
+    Route::get('promos/ac', 'PromoController@indexAC');
+    Route::get('promos/dv', 'PromoController@indexDV');
+    Route::get('promos/count/{id}', 'PromoController@count');
+
     Route::resource('user', 'UserController', ['except' => ['create', 'show']]);
     Route::post('/user/{id}/status', 'UserController@status');
 

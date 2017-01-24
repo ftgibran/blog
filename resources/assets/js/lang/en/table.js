@@ -18,6 +18,7 @@ export default {
     size: 'Size',
     action: 'Actions',
     path: 'Path',
+    message: 'Message',
     image: 'Image',
     link: 'Link',
     enabled: 'Enabled',

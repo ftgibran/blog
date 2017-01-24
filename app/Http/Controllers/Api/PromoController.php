@@ -5,6 +5,7 @@ namespace App\Http\Controllers\Api;
 use App\Repositories\GuestRepository;
 use App\Repositories\PromoRepository;
 use App\Services\IP;
+use App\Transformers\PromoTransformer;
 use Illuminate\Http\Request;
 
 class PromoController extends ApiController
@@ -14,6 +15,7 @@ class PromoController extends ApiController
 
     public function __construct(GuestRepository $guest, PromoRepository $promo)
     {
+        parent::__construct();
         $this->guest = $guest;
         $this->promo = $promo;
     }
@@ -41,4 +43,26 @@ class PromoController extends ApiController
 
         return $this->respondWithArray(['success']);
     }
+
+    public function indexAC()
+    {
+        return $this->respondWithPaginator($this->promo->getAC()->page(), new PromoTransformer);
+    }
+
+    public function indexDV()
+    {
+        return $this->respondWithPaginator($this->promo->getDV()->page(), new PromoTransformer);
+    }
+
+    public function count($id)
+    {
+        $count = 0;
+        if($id == 1) {
+            $count = $this->promo->countAC();
+        } else if ($id == 2) {
+            $count = $this->promo->countDV();
+        }
+        return $this->respondWithArray(['count' => $count]);
+    }
+
 }

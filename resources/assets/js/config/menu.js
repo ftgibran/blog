@@ -5,6 +5,21 @@ export default [
         uri  : '/dashboard/home'
     },
     {
+        label: 'sidebar.lead',
+        icon : 'ion-arrow-graph-up-right',
+        uri  : '/dashboard/leads'
+    },
+    {
+        label: 'sidebar.promoAssassinsCreed',
+        icon : 'ion-ios-star',
+        uri  : '/dashboard/promo-1'
+    },
+    {
+        label: 'sidebar.promoDarthVader',
+        icon : 'ion-ios-star',
+        uri  : '/dashboard/promo-2'
+    },
+    {
         label: 'sidebar.user',
         icon : 'ion-person-stalker',
         uri  : '/dashboard/users'
