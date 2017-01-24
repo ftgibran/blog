@@ -2,6 +2,7 @@
 
 namespace App;
 
+use App\Scopes\StatusScope;
 use Illuminate\Database\Eloquent\Model;
 
 class Guest extends Model

@@ -34,6 +34,36 @@ export default [
                 ]
             },
             {
+                path: 'leads',
+                component: Parent,
+                children: [
+                    {
+                        path: '/',
+                        component: require('./views/dashboard/guest/Guest.vue')
+                    }
+                ]
+            },
+            {
+                path: 'promo-1',
+                component: Parent,
+                children: [
+                    {
+                        path: '/',
+                        component: require('./views/dashboard/promo/AssassinsCreed.vue')
+                    }
+                ]
+            },
+            {
+                path: 'promo-2',
+                component: Parent,
+                children: [
+                    {
+                        path: '/',
+                        component: require('./views/dashboard/promo/DarthVader.vue')
+                    }
+                ]
+            },
+            {
                 path: 'articles',
                 component: Parent,
                 children: [

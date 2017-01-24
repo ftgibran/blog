@@ -6,6 +6,13 @@ Route::group([
 ], function () {
     Route::get('statistics', 'HomeController@statistics');
 
+    Route::get('guests', 'GuestController@index');
+    Route::get('guests/count', 'GuestController@count');
+
+    Route::get('promos/ac', 'PromoController@indexAC');
+    Route::get('promos/dv', 'PromoController@indexDV');
+    Route::get('promos/count/{id}', 'PromoController@count');
+
     Route::resource('user', 'UserController', ['except' => ['create', 'show']]);
     Route::post('/user/{id}/status', 'UserController@status');
 
@@ -41,9 +48,13 @@ Route::group([
 Route::group([
     'namespace' => 'Api',
 ], function () {
+    Route::get('checkip/promo', 'HomeController@checkIPPromo');
+    Route::get('checkip/guest', 'HomeController@checkIPGuest');
+    Route::get('checkip/visited', 'HomeController@checkIPVisited');
+    Route::post('guests', 'GuestController@store');
+    Route::post('promos', 'PromoController@store');
+
     Route::get('commentable/{commentableId}/comment', 'CommentController@show');
-    Route::get('checkip', 'HomeController@checkIP');
-    Route::post('guests', 'HomeController@storeGuest');
     Route::post('comments/guest', 'CommentController@storeGuest');
     Route::post('comments', 'CommentController@store')->middleware('auth:api');
     Route::delete('comments/{id}', 'CommentController@destroy')->middleware('auth:api');

@@ -18,8 +18,6 @@ class CreateGuestTable extends Migration
             $table->string('name');
             $table->string('email');
             $table->ipAddress('ip');
-            $table->string('typePop');
-            $table->text('frase');
             $table->timestamp('created_at');
         });
     }

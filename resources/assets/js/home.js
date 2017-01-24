@@ -15,8 +15,23 @@ Vue.http.interceptors.push((request, next) => {
 });
 
 Vue.component(
+    'ad-corner-box',
+    require('./components/ads/AdCornerBox.vue')
+);
+
+Vue.component(
+    'register',
+    require('./components/ads/Register.vue')
+);
+
+Vue.component(
     'assassins-creed-promo',
     require('./components/ads/AssassinsCreedPromo.vue')
+);
+
+Vue.component(
+    'darth-vader-promo',
+    require('./components/ads/DarthVaderPromo.vue')
 );
 
 Vue.component('comment', require('./components/Comment.vue'));

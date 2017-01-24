@@ -2,7 +2,11 @@
 
 namespace App\Http\Controllers\Api;
 
+use App\Guest;
+use App\Promo;
 use App\Repositories\GuestRepository;
+use App\Services\IP;
+use App\Visitor;
 use Illuminate\Http\Request;
 use App\Repositories\UserRepository;
 use App\Repositories\VisitorRepository;
@@ -31,10 +35,34 @@ class HomeController extends ApiController
         $this->guest = $guest;
     }
 
-    public function checkIP(Request $request)
+    public function checkIPPromo(Request $request)
     {
+        $ip = new IP($request);
+
         $data = [
-            'registered' => \App\Guest::where('ip', $request->ip())->first() ? true : false
+            'registered' => Promo::where('ip', $ip->get())->where('promo_id', $request->promo_id)->first() ? true : false
+        ];
+
+        return $this->respondWithArray($data);
+    }
+
+    public function checkIPGuest(Request $request)
+    {
+        $ip = new IP($request);
+
+        $data = [
+            'registered' => Guest::where('ip', $ip->get())->first() ? true : false
+        ];
+
+        return $this->respondWithArray($data);
+    }
+
+    public function checkIPVisited(Request $request)
+    {
+        $ip = new IP($request);
+
+        $data = [
+            'registered' => Visitor::where('ip', $ip->get())->first() ? true : false
         ];
 
         return $this->respondWithArray($data);
@@ -42,10 +70,12 @@ class HomeController extends ApiController
 
     public function storeGuest(Request $request)
     {
+        $ip = new IP($request);
+
         $data = [
             'name' => $request->get('name'),
             'email' => $request->get('email'),
-            'ip' => $request->ip()
+            'ip' => $ip->get()
         ];
 
         $this->guest->store($data);

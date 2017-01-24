@@ -3,6 +3,7 @@
 namespace App\Http\Controllers\Api;
 
 use App\Repositories\GuestRepository;
+use App\Services\IP;
 use Auth;
 use Illuminate\Http\Request;
 use App\Http\Requests\CommentRequest;
@@ -60,10 +61,12 @@ class CommentController extends ApiController
      */
     public function storeGuest(CommentRequest $request)
     {
+        $ip = new IP($request);
+
         $data1 = [
             'name' => $request->get('name'),
             'email' => $request->get('email'),
-            'ip' => $request->ip()
+            'ip' => $ip->get()
         ];
 
         $data2 = [

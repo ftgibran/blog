@@ -37,6 +37,5 @@
 
 <style scoped>
     .row {
-        overflow: hidden;
     }
 </style>
