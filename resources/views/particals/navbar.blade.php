@@ -2,27 +2,14 @@
     <div class="container">
         <div class="navbar-header">
 
-            <!-- Collapsed Hamburger -->
-            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#app-navbar-collapse">
-                <span class="sr-only">Toggle Navigation</span>
-                <span class="icon-bar"></span>
-                <span class="icon-bar"></span>
-                <span class="icon-bar"></span>
-            </button>
-
             <!-- Branding Image -->
             <a class="navbar-brand" href="{{ url('/') }}">
-                <img src="/images/logo.png" class="responsive-img" alt="Clash Of Nerds"
-                     style="position:relative; top: -28px; width: 240px">
+                <img src="{{ asset('images/clash-of-nerds-white-logo.png') }}" class="responsive-img" alt="Clash Of Nerds"
+                     style="position:relative; top: -24px; width: 200px">
             </a>
         </div>
 
         <div class="collapse navbar-collapse" id="app-navbar-collapse">
-            <!-- Left Side Of Navbar -->
-            <ul class="nav navbar-nav">
-                <li><a href="{{ url('/') }}">{{ lang('Articles') }}</a></li>
-                <li><a href="{{ url('discussion') }}">{{ lang('Discussions') }}</a></li>
-            </ul>
 
             <!-- Right Side Of Navbar -->
             <ul class="nav navbar-nav navbar-right">
@@ -34,10 +21,7 @@
                 </li>
 
                 <!-- Authentication Links -->
-                @if (Auth::guest())
-                    <li><a href="{{ url('login') }}">{{ lang('Login') }}</a></li>
-                    <li><a href="{{ url('register') }}">{{ lang('Register') }}</a></li>
-                @else
+                @if (!Auth::guest())
                     <li class="dropdown">
                         <a href="#" class="dropdown-toggle" data-toggle="dropdown">
                             {{ Auth::user()->nickname ?: Auth::user()->name }}
@@ -54,7 +38,7 @@
                             <li class="divider"></li>
                             <li>
                                 <a href="{{ url('logout') }}"
-                                    onclick="event.preventDefault();
+                                   onclick="event.preventDefault();
                                              document.getElementById('logout-form').submit();">
                                     <i class="ion-log-out"></i>{{ lang('Logout') }}
                                 </a>

@@ -26,7 +26,7 @@
 
                                     <input type="hidden" name="tipo" value="1">
                                     <div class="form-group">
-                                        <h4 style="color: #d5b275">Envie a sua frase e concorra a um Funko Pop do
+                                        <h4 style="color: #557CA3">Envie a sua frase e concorra a um Funko Pop do
                                             Darth Vader!</h4>
                                         <p style="color: #898989">Escreva uma frase explicando <b>porque você
                                             merece ser ganhador dessa competição</b> até às 23:59 do dia 27/01. A

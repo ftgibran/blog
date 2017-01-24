@@ -124,7 +124,7 @@
 
                     <div class="row">
                         <div class="col s12 center">
-                            <button class="waves-effect waves-light btn color-default">Participar</button>
+                            <button class="waves-effect waves-light btn color-default" onclick="ga('send', 'event', 'assassins','click', 'Participar clicado');">Participar</button>
                         </div>
                     </div>
                     {{ Form::close() }}
