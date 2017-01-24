@@ -12,8 +12,8 @@ return [
     'social_share' => [
         'article_share'    => env('ARTICLE_SHARE') ?: true,
         'discussion_share' => env('DISCUSSION_SHARE') ?: true,
-        'sites'            => env('SOCIAL_SHARE_SITES') ?: 'google,twitter,weibo',
-        'mobile_sites'     => env('SOCIAL_SHARE_MOBILE_SITES') ?: 'google,twitter,weibo,qq,wechat',
+        'sites'            => env('SOCIAL_SHARE_SITES') ?: 'google,twitter',
+        'mobile_sites'     => env('SOCIAL_SHARE_MOBILE_SITES') ?: 'google,twitter',
     ],
 
     // Google Analytics

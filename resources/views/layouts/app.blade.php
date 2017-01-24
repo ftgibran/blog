@@ -24,12 +24,20 @@
     <style>
 
         .container-fluid .jumbotron {
-            height: 210px;
-            background-image: url("images/blog-clash-of-nerds.png");
+            min-height: 250px;
+            height: auto;
+            background-image: url("images/blog-clash-of-nerds.jpg");
             background-size: auto 210px;
         }
 
+        .color-default {
+            background-color: #FFF;
+        }
 
+        .banner_ads {
+            width: 100%;
+            max-width: 728px;
+        }
     </style>
 
     @yield('styles')

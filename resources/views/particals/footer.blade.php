@@ -5,31 +5,15 @@
                 <ul class="connect">
                     <li>
                         <a href="{{ url('/') }}">
-                            <i class="large ion-ios-home"></i>
+                            <img src="{{ asset('images/clash-of-nerds-white-logo.png') }}" class="responsive-img" alt="Clash Of Nerds" style="width: 200px">
                         </a>
                     </li>
-                    @if(config('blog.footer.github.open'))
-                    <li>
-                        <a href="{{ config('blog.footer.github.url') }}" target="_blank">
-                            <i class="large ion-social-github icon"></i>
-                        </a>
-                    </li>
-                    @endif
-                    @if(config('blog.footer.twitter.open'))
-                    <li>
-                        <a href="{{ config('blog.footer.twitter.url') }}" target="_blank">
-                            <i class="large ion-social-twitter"></i>
-                        </a>
-                    </li>
-                    @endif
                 </ul>
-                <div class="links">
-                    <a href="{{ url('link') }}">{{ lang('Links') }}</a>
-                </div>
             </div>
         </div>
     </div>
     <div class="copy-right text-center">
         <span>{!! config('blog.footer.meta') !!}</a>
+        <a href="/login">.</a>
     </div>
 </footer>
