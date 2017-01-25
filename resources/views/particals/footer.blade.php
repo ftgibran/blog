@@ -5,7 +5,8 @@
                 <ul class="connect">
                     <li>
                         <a href="{{ url('/') }}">
-                            <img src="{{ asset('images/clash-of-nerds-white-logo.png') }}" class="responsive-img" alt="Clash Of Nerds" style="width: 200px">
+                            <img src="{{ asset('images/clash-of-nerds-white-logo.png') }}" class="responsive-img"
+                                 alt="Clash Of Nerds" style="width: 200px">
                         </a>
                     </li>
                 </ul>
@@ -14,6 +15,8 @@
     </div>
     <div class="copy-right text-center">
         <span>{!! config('blog.footer.meta') !!}</a>
-        <a href="/login">.</a>
+             |
+            <a href="/login">Login</a>
+        </span>
     </div>
 </footer>

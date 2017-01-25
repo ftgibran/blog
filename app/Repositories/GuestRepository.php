@@ -83,7 +83,8 @@ class GuestRepository
      */
     public function store($input)
     {
-        return $this->save($this->model, $input);
+        $model = $this->model->where('email', $input['email'])->orWhere('ip', $input['ip'])->first();
+        return $this->save($model, $input);
     }
 
     /**
@@ -95,7 +96,8 @@ class GuestRepository
      */
     public function save($model, $input)
     {
-        $model = $model->firstOrNew(['email' => $input['email']]);
+        if(!$model)
+            $model = $this->model;
 
         $model->fill($input)->save();
 

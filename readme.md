@@ -1,92 +1,93 @@
-<p align="center">
-<a href="https://pigjian.com/">
-<img src="https://pigjian.com/uploads/Logo.png" alt="Powered By Jiajian Chan" width="160">
-</a>
-</p>
+**Clash of Nerds**
+==============
+[![ClashofNerds](http://clashofnerds.com/images/logo.png)](http://clashofnerds.com/)
 
-<p align="center">🎈 PJ Blog is an open source blog built with Laravel and Vue.js. <a href="https://pigjian.com">https://pigjian.com</a></p>
+Clash of Nerds é um blog sobre o universo dos games. Foi idealizado por pessoas que gostam de games e que jogam em diversas plataformas.
 
-# PJ Blog
+A proposta é produzir conteúdo de qualidade, de forma leve e descontraída. São abordados diversos assuntos do universo gamer:
+ - Novidades
+ - Tendências
+ - Gamers em evidência
+ - Resenhas de jogos
+ - Lançamentos
 
-This is a powerful blog, I try to build the blog more beautiful, more convenient. 
+# Instructions for Gama XP
+---
+> This site was developed using Laravel 5.3 framework and a pre configured blog system.
+> Credit https://github.com/jcc/blog
+### Requirements
+* PHP >= 5.6.4
+* OpenSSL PHP Extension
+* PDO PHP Extension
+* Mbstring PHP Extension
+* Tokenizer PHP Extension
+* XML PHP Extension
+* Composer
+* Local or Remote MySQL server
+* Virutal Host Apache
 
-Laravel 5.3 and Vuejs 2.0 combined with the establishment of a good response and quickly dashboard, the dashboard made through the Vuejs component development.
+### Intallation
+Run these commands below in your workspace:
+```sh
+~/workspace $ git clone https://github.com/ftgibran/blog.git
+~/workspace $ cd blog
+~/workspace/blog $ composer install
+~/workspace/blog $ cp .env.example .env
+~/workspace/blog $ php artisan key:generate
+```
+Open .env file in ~/workspace/blog and set it as the following:
+```sh
+APP_ENV=local
+APP_KEY=[Dont change it]
+APP_DEBUG=true
+APP_LOG_LEVEL=debug
+APP_URL=http://localhost
 
-I believe it will be better and better. If you are interested in this, you can join and enjoy it.
+DB_CONNECTION=mysql
+DB_HOST=127.0.0.1 [or your remote url server]
+DB_PORT=3306
+DB_DATABASE=[your desired database name]
+DB_USERNAME=[database user name (e.g. root)]
+DB_PASSWORD=[database password]
 
-Here is [documents](https://manual.pigjian.com/)
+BROADCAST_DRIVER=log
+CACHE_DRIVER=file
+SESSION_DRIVER=file
+QUEUE_DRIVER=sync
 
-## Basic Features
+REDIS_HOST=127.0.0.1
+REDIS_PASSWORD=null
+REDIS_PORT=6379
 
-- Manage users, articles, discussions and media
-- Statistical tables
-- Categorize articles
-- Label classification
-- Content moderation
-- Own comments system
-- Multi-language switching
-- Markdown Editor
-- and more...
+MAIL_DRIVER=smtp
+MAIL_HOST=mailtrap.io
+MAIL_PORT=2525
+MAIL_USERNAME=null
+MAIL_PASSWORD=null
+MAIL_ENCRYPTION=null
 
-[PJ Blog](https://github.com/jcc/blog) Laravel 5.3.
-
-## Preview
-
-![New Blog](https://pigjian.com/uploads/post_img/2016-12-27/newblog1.jpeg)
-
-![New Blog](https://pigjian.com/uploads/post_img/2016-12-27/newblog2.jpeg)
-
-## Install
-
-### 1. Clone the source code or create new project.
-
-```shell
-git clone https://github.com/jcc/blog.git
+PUSHER_APP_ID=
+PUSHER_KEY=
+PUSHER_SECRET=
 ```
 
-OR
-
-```shell
-composer create-project jcc/blog
+Run this command below:
+```sh
+~/workspace/blog $ php artisan blog:install
 ```
 
-### 2. Set the basic config
+Configure your Virtual Host to redirect your blog.localhost/ to ~/workspace/blog/public/
 
-```shell
-cp .env.example .env
+Enter http://blog.localhost/ and done!
+
+#### Obs
+* Maybe you need to change your permissions in ~/workspace/blog/storage. To do it, just run the following command:
+```sh
+~/workspace/blog $ chown -R 777 storage/
 ```
+* If you want to edit js/Vue files, first you need to run `npm install` in your project directory and then, after your changes, run `gulp`
 
-Edit the `.env` file and set the `database` and other config for the system after you copy the `.env`.example file.
-
-### 2. Install the extended package dependency.
-
-Install the `Laravel` extended repositories: 
-
-```shell
-composer install -vvv
-```
-
-Install the `Vuejs` extended repositories: 
-
-```shel
-npm install
-```
-
-### 3. Run the blog install command, the command will run the `migrate` command and generate test data.
-
-```shell
-php artisan blog:install
-```
-
-## Contributors
-
-- [Jiajian Chan](http://github.com/jcc)
-
-## Thanks
-
-- [Laravist](https://www.laravist.com/)
-- [Laravel - China](https://laravel-china.org/)
-
-## License
-
-The project is open-sourced software licensed under the [MIT license](http://opensource.org/licenses/MIT).
+----
+License
+----
+MIT
