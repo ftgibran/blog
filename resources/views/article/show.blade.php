@@ -41,7 +41,7 @@
 
     <div class="article container">
         <div class="row">
-            <div class="col-md-8 col-md-offset-2">
+            <div class="col-md-10 col-md-offset-1">
 
             <parse :content="{{ $article->content }}"></parse>
 
