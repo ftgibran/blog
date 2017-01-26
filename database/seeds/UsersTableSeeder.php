@@ -15,94 +15,14 @@ class UsersTableSeeder extends Seeder
     {
         $users = [
             [
-                'name' => 'Felipe Gibran',
-                'email' => 'ft.gibran@gmail.com',
+                'name' => 'Admin',
+                'email' => 'admin@admin.com',
                 'password' => Hash::make('abcabc'),
                 'status' => true,
                 'is_admin' => true,
                 'confirm_code' => str_random(64),
                 'created_at' => Carbon::now(),
                 'updated_at' => Carbon::now()
-            ],
-            [
-                'name' => 'Vinicius França',
-                'email' => 'viniciusdasilva10@hotmail.com',
-                'password' => Hash::make('abcabc'),
-                'status' => true,
-                'is_admin' => true,
-                'confirm_code' => str_random(64),
-                'created_at' => Carbon::now(),
-                'updated_at' => Carbon::now()
-            ],
-            [
-                'name' => 'Allan Fernandes',
-                'email' => 'allanutrition@gmail.com',
-                'password' => Hash::make('abcabc'),
-                'status' => true,
-                'is_admin' => true,
-                'confirm_code' => str_random(64),
-                'created_at' => Carbon::now(),
-                'updated_at' => Carbon::now()
-            ],
-            [
-                'name' => 'Ana Parrotto',
-                'email' => 'ana.parrotto@gmail.com',
-                'password' => Hash::make('abcabc'),
-                'status' => true,
-                'is_admin' => true,
-                'confirm_code' => str_random(64),
-                'created_at' => Carbon::now(),
-                'updated_at' => Carbon::now()
-            ],
-            [
-                'name' => 'Bruna D\'Amato',
-                'email' => 'brunadamato@outlook.com',
-                'password' => Hash::make('abcabc'),
-                'status' => true,
-                'is_admin' => true,
-                'confirm_code' => str_random(64),
-                'created_at' => Carbon::now(),
-                'updated_at' => Carbon::now()
-            ],
-            [
-                'name' => 'Gabriel Farias',
-                'email' => 'gabrielgsf31@gmail.com',
-                'password' => Hash::make('abcabc'),
-                'status' => true,
-                'is_admin' => true,
-                'confirm_code' => str_random(64),
-                'created_at' => Carbon::now(),
-                'updated_at' => Carbon::now()
-            ],
-            [
-                'name' => 'João Victor Fagundes',
-                'email' => 'joaostorel@gmail.com',
-                'password' => Hash::make('abcabc'),
-                'status' => true,
-                'is_admin' => true,
-                'confirm_code' => str_random(64),
-                'created_at' => Carbon::now(),
-                'updated_at' => Carbon::now()
-            ],
-            [
-                'name' => 'Julia Wajs',
-                'email' => 'juliaswajs@gmail.com',
-                'password' => hash::make('abcabc'),
-                'status' => true,
-                'is_admin' => true,
-                'confirm_code' => str_random(64),
-                'created_at' => carbon::now(),
-                'updated_at' => carbon::now()
-            ],
-            [
-                'name' => 'Bruno Shigueo',
-                'email' => 'yesshigueo@gmail.com',
-                'password' => hash::make('abcabc123123'),
-                'status' => true,
-                'is_admin' => true,
-                'confirm_code' => str_random(64),
-                'created_at' => carbon::now(),
-                'updated_at' => carbon::now()
             ],
             [
                 'id' => 10,

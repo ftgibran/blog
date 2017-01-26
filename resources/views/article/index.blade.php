@@ -8,9 +8,9 @@
         <h5>Aproveite a nossa campanha de lançamento e concorra à prêmios!</h5>
 
         @if(rand(0,1) == 0)
-            <a href="/concurso/assassins-creed" class="waves-effect waves-light btn color-default">PARTICIPAR</a>
+            <a href="/concurso/assassins-creed" class="btn btn-default">PARTICIPAR</a>
         @else
-            <a href="/concurso/darth-vader" class="waves-effect waves-light btn color-default">PARTICIPAR</a>
+            <a href="/concurso/darth-vader" class="btn btn-default">PARTICIPAR</a>
         @endif
 
         <h6>{{ config('blog.article.description') }}</h6>

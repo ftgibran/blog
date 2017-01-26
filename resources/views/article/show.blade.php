@@ -30,11 +30,11 @@
     <div class="text-center">
         @if(rand(0,1) == 0)
             <a href="/concurso/assassins-creed">
-                <img src="/images/ads/banner_ac.gif" alt="Assassin Creed">
+                <img src="/images/ads/banner_ac.gif" alt="Assassin Creed" class="banner_ads">
             </a>
         @else
             <a href="/concurso/darth-vader">
-                <img src="/images/ads/banner_sw.gif" alt="Darth Vader">
+                <img src="/images/ads/banner_sw.gif" alt="Darth Vader" class="banner_ads">
             </a>
         @endif
     </div>

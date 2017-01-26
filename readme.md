@@ -15,6 +15,7 @@ A proposta é produzir conteúdo de qualidade, de forma leve e descontraída. S�
 ---
 > This site was developed using Laravel 5.3 framework and a pre configured blog system.
 > Credit https://github.com/jcc/blog
+
 ### Requirements
 * PHP >= 5.6.4
 * OpenSSL PHP Extension
@@ -24,9 +25,9 @@ A proposta é produzir conteúdo de qualidade, de forma leve e descontraída. S�
 * XML PHP Extension
 * Composer
 * Local or Remote MySQL server
-* Virutal Host Apache
+* Virtual Host Apache
 
-### Intallation
+### Installation
 Run these commands below in your workspace:
 ```sh
 ~/workspace $ git clone https://github.com/ftgibran/blog.git
@@ -70,7 +71,6 @@ PUSHER_APP_ID=
 PUSHER_KEY=
 PUSHER_SECRET=
 ```
-
 Run this command below:
 ```sh
 ~/workspace/blog $ php artisan blog:install
