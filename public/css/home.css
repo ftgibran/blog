@@ -13496,6 +13496,7 @@ button.toast-close-button {
   overflow: hidden;
   line-height: 2;
   word-wrap: break-word;
+  font-size: 2rem;
 }
 
 .markdown a {
@@ -14538,6 +14539,20 @@ i.large {
   margin-bottom: 30px;
 }
 
+.btn-success {
+  background-color: #52697f;
+  border-color: #52697f;
+}
+
+.media-left img {
+  background-size: cover;
+  -o-object-fit: cover;
+  object-fit: cover;
+  -o-object-position: center;
+  object-position: center;
+  max-height: 150px;
+}
+
 .article .social-share {
   margin-bottom: 20px;
 }
@@ -14950,7 +14965,7 @@ i.large {
 
 .list .media .media-body .extra .info > a {
   display: inline-block;
-  color: #18bc9c;
+  color: #52697f;
 }
 
 .list .media .media-body .extra > a {
